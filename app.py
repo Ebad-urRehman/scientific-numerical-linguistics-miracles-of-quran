@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
+from other_pages.chatbot import display_chatbot
 from other_pages.home import display_home
 from other_pages.linguistic_miracles import display_linguistic_miracles
 from other_pages.numerical_patterns import display_numerical_miracles
@@ -20,7 +21,8 @@ with st.sidebar:
             "Linguistic Miracles",
             "Numerical Patterns",
             "Interesting Subtleties",
-            "Discover New Patterns"
+            "Discover New Patterns",
+            "Quranic AI"
         ],
         icons=["house", "microscope", "chat-text", "123", "lightbulb", "search"],
         menu_icon="cast",
@@ -51,3 +53,6 @@ elif selected == "Discover New Patterns":
     - Pattern mining and symmetrical phrase detection
     - Community-sourced discoveries
     """)
+
+elif selected=="Quranic AI":
+    display_chatbot()

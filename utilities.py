@@ -1,4 +1,5 @@
 import re
+from typing import Counter
 
 def remove_harakat(text):
     # Remove harakat (diacritics)
@@ -29,3 +30,17 @@ def remove_harakat(text):
     text = arabic_letters_pattern.sub('', text)
 
     return text
+
+## This function completely removes characters that appear more than once in a string
+def remove_global_duplicates(strings):
+    # Combine all strings into one to count total occurrences
+    all_chars = re.findall(r'.', ''.join(strings))
+    char_counts = Counter(all_chars)
+    
+    # Characters that appear only once in total
+    unique_chars = {char for char, count in char_counts.items() if count == 1}
+    
+    # For each string, keep only the characters that are globally unique
+    result = [''.join([char for char in s if char in unique_chars]) for s in strings]
+    
+    return result

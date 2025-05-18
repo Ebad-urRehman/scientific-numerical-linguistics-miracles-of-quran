@@ -1,3 +1,4 @@
+import re
 import streamlit as st
 
 def display_numerical_miracles():
@@ -26,3 +27,5 @@ def display_numerical_miracles():
     """)
 
     st.info("These word counts are preserved across centuries and manuscripts, hinting at divine preservation.")
+
+

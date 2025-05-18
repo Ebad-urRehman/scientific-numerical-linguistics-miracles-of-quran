@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-from utilities import remove_harakat
+from utilities import remove_global_duplicates, remove_harakat
 
 quran = pd.read_csv("The Quran Dataset.csv")  
 
@@ -48,7 +48,7 @@ def display_interesting_subtleties():
     **Significance of number 10 in surah kausar**
     - The chapter consists of 10 words in Arabic.
     - Every verse has 10 unique letters.
-    - The chapter has 10 unique letters in total.
+    - This chapter has 10 such letters that doesn't repeat themselves in any ayah.
     """)
     kausar_ayat = quran[quran['surah_name_en'] == 'The Abundance']
     ayah1 = kausar_ayat[quran['ayah_no_surah'] == 1]['ayah_ar'].to_string().split()[1:]
@@ -67,7 +67,20 @@ def display_interesting_subtleties():
         lettersayah1 = remove_harakat("".join(ayah1).replace(" ", ""))
         lettersayah2 = remove_harakat("".join(ayah2).replace(" ", ""))
         lettersayah3 = remove_harakat("".join(ayah3).replace(" ", ""))
-        st.info(f"Letters in ayah 1 : {ayah1}, {len(set(lettersayah1))}")
-        st.info(f"Letters in ayah 2 : {ayah2}, {len(set(lettersayah2))}")
-        st.info(f"Letters in ayah 3 :  {ayah3}, {len(set(lettersayah3))}")
+        st.info(f"Unique Letters in ayah 1 : {set(lettersayah1)}, {len(set(lettersayah1))}")
+        st.info(f"Unique Letters in ayah 2 : {set(lettersayah2)}, {len(set(lettersayah2))}")
+        st.info(f"Unique Letters in ayah 3 :  {set(lettersayah3)}, {len(set(lettersayah3))}")
     st.success("These subtleties show the Qur'an's linguistic depth and structural design, hinting at divine authorship.")
+
+    with st.expander("Click to see letters that doesn't repeat themselves in any ayah"):
+        st.info("Letters that appear once in every ayah: ")
+
+        # find letters that appear once in every ayah
+        lettersayah_list = [lettersayah1, lettersayah2, lettersayah3]
+        non_repeated_letters = remove_global_duplicates(lettersayah_list)
+
+        st.info(f"Non-repeated letters in all ayahs: {non_repeated_letters}")
+        st.info(f"Non-repeated letters in ayah 1: {set(non_repeated_letters[0])}, {len(non_repeated_letters[0])}")
+        st.info(f"Non-repeated letters in ayah 2: {set(non_repeated_letters[1])}, {len(non_repeated_letters[1])}")
+        st.info(f"Non-repeated letters in ayah 3: {set(non_repeated_letters[2])}, {len(non_repeated_letters[2])}")
+        st.info(f"Total non-repeated letters: {len(non_repeated_letters[0]) + len(non_repeated_letters[1]) + len(non_repeated_letters[2])}")
