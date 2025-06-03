@@ -1,7 +1,7 @@
 import streamlit as st
 from langchain_openai import OpenAI, OpenAIEmbeddings
 import os
-from langchain.vectorstores import FAISS
+from langchain_community.vectorstores import FAISS
 from langchain.chains import RetrievalQA
 import json
 from datetime import datetime
@@ -15,12 +15,14 @@ def display_chatbot():
     # Load FAISS vector index
     saved_library = FAISS.load_local("faiss_index_mathematics_quran", embeddings, allow_dangerous_deserialization=True)
 
-    # Display preview of documents
-    for i, doc in enumerate(saved_library.docstore._dict.values()):
-        st.info(f"Document {i+1}: {doc.page_content[:100]}")
-        if i >= 8:
-            break
-
+    # # Display preview of documents
+    # for i, doc in enumerate(saved_library.docstore._dict.values()):
+    #     st.info(f"Document {i+1}: {doc.page_content[:100]}")
+    #     if i >= 8:
+    #         break
+    
+    st.markdown("### Specialized Chatbot RAG trained on Quranic books")
+    st.info("- This is a specialized rag model trained on 10+ books, and articles on scientific, and mathematical study of Quran")
     # Initialize session state for chat history
     if "chat_history" not in st.session_state:
         st.session_state.chat_history = []
@@ -53,3 +55,5 @@ def display_chatbot():
     for message in st.session_state.chat_history:
         st.chat_message("user").write(message["question"])
         st.chat_message("assistant").write(message["answer"])
+
+display_chatbot()
