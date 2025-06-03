@@ -8,7 +8,8 @@ from datetime import datetime
 
 def display_chatbot():
     # Set up OpenAI client and embeddings
-    api_key = os.getenv("OPENAI_KEY")
+    api_key = st.secrets["api_key"]["openai"] 
+
     client = OpenAI(openai_api_key=api_key)
     embeddings = OpenAIEmbeddings(openai_api_key=api_key)
     
