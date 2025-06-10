@@ -5,3 +5,12 @@ other_pages/__pycache__/subtleties.cpython-313.pyc
 __pycache__/utilities.cpython-313.pyc
 11venv/
 pdfs/
+.streamlit/secrets.toml
+.streamlit/
+app_pages/newchatbot.py
+backup/
+chat_history (copy 1).json
+quran_math_model.zip
+quran_math_model/
+.gitignore
+faiss_index_mathematics_quran
