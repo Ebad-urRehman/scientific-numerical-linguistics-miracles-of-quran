@@ -47,11 +47,4 @@ Modern geology has found:
 
 - A 7th-century desert revelation described mountains using a term consistent with **modern geological insight**.
 - The Qur’an invites us to reflect on **natural structures** to recognize **divine design**.
-
----
-
-## 🎥 Optional Video
-
-```python
-st.video("https://www.youtube.com/watch?v=FQZiqgU2iF8")  # Replace with a reliable geology + Quran video
 """)

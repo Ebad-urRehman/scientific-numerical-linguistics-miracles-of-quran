@@ -35,13 +35,6 @@ st.markdown("""
 
 ---
 
-## 🎥 Video Insight
-```python
-st.video("https://www.youtube.com/watch?v=e-P5IFTqB98")  # A video on black holes & cosmic mysteries
-```
-
----
-
 ## 🧠 Reflection
 - Black holes may reflect Allah’s **invisible might**—a creation we can’t see, but whose presence warps reality.
 - Portals and wormholes stir thought about the **unknown paths** in creation and journey of the soul.

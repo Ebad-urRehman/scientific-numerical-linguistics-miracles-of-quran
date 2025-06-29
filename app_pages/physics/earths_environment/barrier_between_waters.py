@@ -49,10 +49,4 @@ You can monitor live global ocean currents, temperatures, and salinity here:
 - A 1400-year-old scripture described phenomena only discovered by oceanographers in the last century.
 - These ayahs are **reminders of Allah’s control** over even the vastest parts of nature.
 
----
-
-## 🎥 Educational Video
-
-```python
-st.video("https://www.youtube.com/watch?v=UqKk3Uo9b3U")  # Or any relevant barrier science + Quran video
 """)

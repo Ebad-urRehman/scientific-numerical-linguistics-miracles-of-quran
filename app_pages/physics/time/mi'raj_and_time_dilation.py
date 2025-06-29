@@ -43,9 +43,4 @@ This aligns conceptually with the **modern scientific theory of time dilation**:
 - The event is a **sign**, as the verse emphasizes: _"to show him of Our signs"_.
 
 ---
-
-### 🎥 Related Video (Optional)
-
-```python
-st.video("https://www.youtube.com/watch?v=2QaMMyg4Uoc")  # Add your preferred Mi'raj + Science video
 """)

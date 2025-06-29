@@ -59,10 +59,4 @@ This subtly reflects the **geoid shape** of the Earth.
 - The use of precise Arabic words like *yukawwir* and *dahaha* supports deeper meanings.
 
 ---
-
-## 🎥 Video: Earth’s Shape and Movement in Qur'an
-
-```python
-st.video("https://www.youtube.com/watch?v=pqF27UAg9Nc")  # Replace with reliable video
-```
 """)

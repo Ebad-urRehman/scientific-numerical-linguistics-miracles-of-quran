@@ -46,13 +46,6 @@ st.markdown("""
 
 ---
 
-## 🎥 Video Explanation
-```python
-st.video("https://www.youtube.com/watch?v=ck-zfX7VV98")  # Video: Iron in Quran and Science
-```
-
----
-
 ## 🧠 Reflection
 The connection between iron's cosmic origin and its Qur'anic mention opens a gateway to ponder the knowledge embedded in revelation.
 

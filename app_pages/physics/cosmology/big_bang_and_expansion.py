@@ -47,14 +47,6 @@ The Arabic word **"moosi'oon" (expanding)** beautifully aligns with this modern 
 
 ---
 
-## 🎥 Watch More on the Topic
-```python
-st.video("https://www.youtube.com/watch?v=khFjdMPVZfA")  # Quran & Big Bang
-st.video("https://www.youtube.com/watch?v=UYkM1NDw_6M")  # Expanding Universe explained
-```
-
----
-
 ## 🧠 Reflection
 The Qur'an, revealed over 1400 years ago, spoke of the **creation** and **expansion** of the universe — facts discovered only in the 20th century.
 

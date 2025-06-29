@@ -51,11 +51,4 @@ Some classical scholars interpret the 1,000 years as:
 
 Others suggest:
 - The **angels** may travel at the **speed of light**, and this verse may hint at that speed.
-
----
-
-## 🎥 Watch More
-
-```python
-st.video("https://www.youtube.com/watch?v=7cHeo9KYZ-M")  # Replace with trusted Islamic + physics content
 """)
